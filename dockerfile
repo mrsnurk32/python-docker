@@ -4,10 +4,8 @@ FROM ubuntu:latest
 # Install Git, Python, and pip
 RUN apt-get update && apt-get install -y \
     git \
-    python3 \
+    python3-full \
     python3-pip
-
-RUN pip3 install pylint ipykernel jupyterlab
 
 # Set the working directory
 WORKDIR /usr/src/app/
